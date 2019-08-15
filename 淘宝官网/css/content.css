@@ -1,0 +1,494 @@
+@charset "utf-8";   /*设置编码*/
+/*选项卡*/
+.nav h2{
+	width: 190px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	background: #f50;
+}
+.nav ul{
+	/*width: 810px;*/
+	width: calc(100% - 190px);  /*父级的宽度减去'主题市场'的width等于ul的width 跨单位但空格不能少*/
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+}
+.nav ul li{
+	float: left;   /*列表为一行,浮动即可*/
+	line-height: 30px;
+	margin: 0 9px;
+	font-size: 14px;
+	position: relative;/*相对定位，相对定位元素的定位是相对其正常位置*/
+}
+.nav ul li.size{       /*天猫 聚划算 天猫超市 样式*/
+	font-size: 16px;
+}
+.nav ul a{
+	color: #fff;
+}
+.nav ul li.line{
+	color: #fff;
+}
+.nav ul li a:hover:before{ /*:before被选元素的内容前面插入内容*/
+	content: ''; /*content 属性来指定要插入的内容*/
+	position: absolute;/*绝对定位，相当与非static第一个父元素进行定位*/
+	width: 25px;
+	height: 15px;
+	background: url(../img/tou.png)  center no-repeat;
+	background-size: 100% auto;   /*背景图片自动大小*/
+	top: -13px;
+	left: 25%;
+	/*margin-left: 10px;*/
+}
+
+/*左内容*/
+	/*左侧导航*/
+	.firstLeft .sidenav {
+		width: 190px;
+		height: 522px;
+		background-color: #fff;
+		border: 1px solid #FF5000;
+		border-top:none ;
+		padding-top: 5px;
+		box-sizing: border-box;
+	}
+	.sidenav li{
+		height: 32px;
+		line-height: 32px;
+		padding-left: 25px;
+		transition: background-color 0.3s; /*延迟显示背景色*/
+	}
+	.sidenav li:hover{
+		background: #ffe4dc;
+	}
+	.sidenav li a{
+		font-size: 14px;
+	}
+	.sidenav li a:hover{
+		text-decoration:underline;
+		color: #f50;
+	}
+	/*右箭头*/
+	.firstLeft .rightarrow{
+		float: right;
+		margin-right: 10px;
+		font-size: 13px;
+		color: #999;
+	}
+	/*图片容器1*/
+	.firstLeft .img1box {
+		width: 694px;
+		height: 277px;
+		/*margin: 0 auto;*/
+		background-color: #eee;
+		margin-left: 196px;
+		padding-top: 10px;
+	}
+	/*轮播图*/
+	.firstLeft .pic{
+		width: 520px;
+		position: relative;
+	}
+	/*轮播图按钮*/
+	.firstLeft .pic button{
+		width: 20px;
+		height: 30px;
+		line-height: 30px;
+		color: #fff;
+		cursor: pointer;
+		border: none;
+		background-color: rgba(0,0,0,0.3);
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		display: none;/*默认不显示轮播图按钮*/
+	}
+	/*左按钮*/
+	.firstLeft .pic .leftBtn{
+		border-radius:0 15px 15px 0 ;
+	}
+	/*右按钮*/
+	.firstLeft .pic .rigtBtn{
+		right: 0;
+		border-radius:15px 0  0 15px;
+	}
+	/*鼠标放到轮播图上显示按钮*/
+	.firstLeft .pic:hover button{
+		display: block;
+	}
+	/*装五个小点的div*/
+	.firstLeft .pic .circle{
+		position: absolute;/**通过指定 top/right/botton/left 定位一个元素*/
+		cursor: pointer;
+		/*button:-15px;*/
+		/*lift:50%;*/
+		top: 90%;
+		right:45%;
+		background-color: rgba(225,225,225,0.3);
+	}
+	/*轮播图上五个小点*/
+	.firstLeft .pic .circle span{
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius:50% ;
+		background-color: #fff;
+		margin: 0 3px;   /*控制小点的距离*/
+		cursor: pointer;/*鼠标放上去是手的形状*/
+	}
+	/*被选中的小点*/
+	.firstLeft .pic .circle span.active{
+		background-color: #FF5000;
+	}
+	/*右侧焦点图*/
+	.firstLeft .ad{
+		width: 160px;
+	}
+	<!--轮播图2-->
+	.firstLeft .ad img{
+		width: 160px;
+		height: 280px;
+		background-color: #fff;
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+	}
+	/*图片容器2*/
+	.firstLeft .img2box {
+		width: 694px;
+		height: 225px;
+		/*background-color: #fff;*/
+		margin-top: 10px;
+		margin-left: 196px;
+		
+	}
+	/*今日热买*/
+	.img2box .ad{
+		height: 200px;
+		width: 160px;
+		/*padding-right: 10px;*/
+	}
+	.img2box .ad img{
+		height: 204px;
+		width: 160px;
+		margin-right: 10px;
+	}
+	/*轮播图2右上角天猫logo*/
+	.picTitle .test img{
+		display: inline-block;
+		width: 136px;
+		height: 19px;
+	}
+	/*logo右边的文字'理想生活上天猫'*/
+	.picTitle .test .bg{
+		padding-left:20px;
+	}
+	/*轮播图2上的分割线*/
+	.picTitle ul{
+		width: 520px;
+	}
+	.picTitle ul li{
+		width: 86.6px;
+		height: 3px;
+		float: left;
+		display: inline-block;
+		background: #ff1648;
+	}
+	/*被选中的li*/
+	#back{
+		background: #000;
+	}
+	.picTitle .test i{/*1/6*/
+		color: red;
+	}
+	/*轮播图中的图片*/
+	.img2box .img a img{
+		height: 180px;
+		width: 250px;
+		margin-top: 20px;
+	}
+	/*轮播图中的左边的图片*/
+	.img2box .img a img.img1{
+		padding-right: 14px;
+	}
+	/*今日热买的字*/
+	.img2box .ad .today{
+	/*line-height: 0.5;*/
+	    background: #f1f1f1;
+    	color: #a1a1a1;
+	}
+	/*淘宝头条*/
+	.firstLeft .news {
+		width: 890px;
+		height: 100px;
+		background-color: #fff;
+		box-sizing: border-box;
+		padding: 13px 13px 13px 20px;
+		margin-top: 7px;
+		
+	}
+	/*h3以图换字*/
+	.news .new h3{
+		width: 130px;
+		height: 63px;
+		background: url(../img/taobaonew/淘宝头条.png) center no-repeat;
+		background-size: 120px 30px;   /*背景图的大小*/
+		text-indent: -9999px;  /*这样就看不到h3中的文字*/
+	}
+	/*以图换字下面的文字*/
+	.news .new p{
+		line-height: 24px;
+	    height: 24px;
+	    color: #999;
+	    font-weight: 400;
+	    margin-top: -12px;
+	    margin-left: 6px;
+	}
+	/*头条图片*/
+	.firstLeft .news .img img{
+		width: 130px;
+		height: 72px;
+		padding-top:6px ;
+		padding-right: 15px;
+	}
+	/*头条的标题和文字*/
+	.news .newList .imtem h4{
+		font-size: 16px;
+		
+	}
+	.news .newList .imtem h4 a{
+		color: #333;
+	}
+	.news .newList .imtem h4 a:hover{
+		color: #f50;
+	}
+	.news .newList .imtem p{
+		font-size: 14px;
+	}
+	.news .newList .imtem p a{
+		color: #999;
+	}
+	
+	/*右侧更多*/
+	.imtem .more{
+		margin-top: -69px;
+		/*margin-left:30px;*/
+	}
+/*右内容*/
+.firstRight {
+	width: 298px;
+	height: 620px;
+	margin-top: 10px;
+	background-color: #fff;
+}
+	/*用户背景图*/
+.firstRight .user{
+	background: url(../img/RightContent/userbgt.png) no-repeat center;
+	background-size: 298px 124px;
+	text-align: center;
+}
+/*用户头像*/
+.firstRight .avatar img{
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 7px;
+	border-radius: 50%;
+}
+/*Hi,你好*/
+.firstRight .user .username{
+	line-height: 16px;
+}
+/*领淘金币抵钱外的div*/
+.firstRight .user .members{
+	margin-bottom: 10px;
+}
+/*会员俱乐部 领淘金币抵钱*/
+.firstRight .user .members a{
+	font-size: 0;
+	display: inline-block;
+	font-size: 12px;
+	border-radius: 9px;
+	padding: 0 10px 0 20px;
+	margin: 0 2px;
+	background-color: #FFE4dc;
+}
+/*领淘金币抵钱背景图*/
+.firstRight .user .members a.gold{
+	background: #FFE4dc url(../img/RightContent/TB1ty.png) no-repeat ;
+	background-position: 3px -572.5px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+/*会员俱乐部背景图*/
+.firstRight .user .members a.club{
+	background: #FFE4dc url(../img/RightContent/TB1ty.png) no-repeat ;
+	background-position: 3px -527.5px;
+    background-size: 24px 597px;
+}
+/*登录注册开店三个按钮*/
+.firstRight .user .btn button{
+	width: 75px;
+	height: 25px;
+	line-height: 25px;
+	margin: 12px 2px 0 2px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 4px;
+	border: none;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+		/*渐变色		                 默认从上往下   开始的颜色  结束的颜色*/
+	margin-top: -2px;
+	cursor: pointer;/*鼠标小手*/
+}
+.firstRight .user .btn .login{
+	width: 95px;
+}
+/*举报*/
+.firstRight .tipoff{
+	display: block;
+	height: 26px;
+	line-height: 26px;
+	color: #f40;
+	background-color: #ffe4dc;
+	text-align: center;
+	margin-top: 15px;
+}
+.firstRight .tipoff i{
+	margin-left: 25px;
+}
+/*公告区*/
+.firstRight .notice{
+	height: 108px;
+	background-color: #fff;
+}
+.firstRight .notice .title{
+	text-align: center;
+	padding-top: 10px;
+}
+.firstRight .notice .title a{
+	font-size: 14px;
+}
+.firstRight .notice .title li{
+	display: inline-block;
+	font-size: 12px;
+	line-height: 20px;
+	padding: 0 4px;
+	margin: 0 10px;
+}
+.firstRight .notice .title li.active{
+	font-weight: bold;
+	border-bottom: 2px solid #f40;
+}
+.firstRight .notice .title li a:hover{
+	color: #FF5000;
+}
+.firstRight .notice .content{
+	margin: 0 12px;
+	padding-top: 10px;
+}
+.firstRight .notice .content a{
+	line-height: 25px;
+}
+.firstRight .notice .content a:hover{
+	color: #FF5000;
+}
+.firstRight .notice .content .item1 a{
+	color: #FF5000;
+}
+/*图标*/
+.firstRight .icon{
+	width: 297.99px;
+	height: 236px;
+	background-color: #fff;
+	table-layout: fixed;
+	border: 1px #002A80;
+}
+.firstRight .icon td{
+	display: inline-block;
+	width: 69px;
+    height: 73px;
+	border: 1px solid #F4F4F4;
+	text-align: center;
+}
+.firstRight .icon span{
+	display: block;
+	width: 38px;
+	height: 38px;
+	margin: 6px 21px;
+	background: url(../img/RightContent/TB1ty.png) no-repeat;
+	background-position: 0px -385px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item1 span{
+	background-position: 0px 12px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item2 span{
+	background-position: 0px -76px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item3 span{
+	background-position: 0px -32px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item4 span{
+	background-position: 0px -120px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item5 span{
+	background-position: 0px -164px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item6 span{
+	background-position: 0px -209px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item7 span{
+	background-position: 0px -253px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item8 span{
+	background-position: 0px -297px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item9 span{
+	background-position: 0px -339px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item10 span{
+	background-position: 0px -381px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item11 span{
+	background-position: 0px -427px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+.firstRight .icon .item12 span{
+	background-position: 0px -472px;   /*背景图的显示区域*/
+    background-size: 24px 597px;	/*重新定义背景图的大小*/
+}
+/*阿里App*/
+.app .title a,h3{
+	line-height: 30px;
+	
+}
+.app .title h3{
+	margin-left: 15px;
+}
+.app .title a{
+	margin-right: 15px;
+}
+.app .title a:hover{
+	color: #f40;
+}
+.app .appIcon li{
+	float: left;
+}
+.app .appIcon img{
+	width: 32px;
+	height: 32px;
+	padding: 5px 10px;
+	margin-left: 7px;
+}

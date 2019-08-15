@@ -1,0 +1,164 @@
+
+/*好货and逛街*/
+.goods{
+	width: 590px;
+	height: 658px;
+	background-color: #fff;
+	overflow: hidden;
+}
+.goods .head{
+	height: 24px;
+	line-height: 24px;
+	margin: 20px 0;
+	padding: 0 20px;
+}
+.goods .head h3{
+	font-size: 0;
+	font-weight: normal;  /*字体正常*/
+}
+.goods .head h3 img{
+	height: 24px;
+	
+}
+.goods .head h3 span{
+	vertical-align: middle;
+	color: #ccc;
+	font-size: 20px;
+	margin: 0 5px;
+}
+.goods .head h3 i{
+	font-size: 20px;
+	vertical-align: middle;
+	color: #999;
+}
+.goods .head .change{
+	color: #999;
+	
+}
+/*商品*/
+.goods .list{
+	font-size: 0;
+	text-align: center;
+}
+.goods .list li{
+	width: 180px;
+	display: inline-block;
+	margin: 0 2px 35px 2px;
+	text-align: left;
+	overflow: hidden;
+	
+}
+.goods .list li img{
+	width: 180px;
+	height: 180px;
+}
+.goods .list li h4{
+	font-size: 16px;
+	height: 28px;
+	line-height: 28px;
+	font-weight: normal;
+}
+.goods .list li h4 a{
+	word-break: keep-all;/*不换行*/
+
+}
+.goods .list li h4 a:hover{
+	color: #f40;
+}
+.goods .list li .text{
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.goods .list li .text a{
+	color: #999;
+	
+}
+.goods .list li i{
+	font-size: 14px;
+	color: #35b1ff;
+	padding-left: 5px;
+	display: inline-block;
+	padding-top: 10px;
+}
+.goods .list .iconfont{
+	font-size: 14px;
+	color: #35b1ff;
+	display: inline-block;
+	padding-top: 10px;
+}
+/*爱逛街*/
+.shopping .list .bu{
+	display: inline-block;
+	
+}
+/*头像到标题的距离*/
+.shopping .list .bu{
+	display: inline-block;
+	margin-top: 15px;
+}
+/*头像*/
+.shopping .list .bu img{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 50%;
+}
+/*用户名*/
+.shopping .list .bu i{
+	display: inline-block;
+	color: #999;
+	line-height: 25px;
+	margin-top: 3px;
+	margin-left: 30px;
+}
+.shopping .list h4{
+	line-height: 23px;
+}
+/*引号*/
+.shopping .list h4 .iconfont{
+	color: #999;
+	line-height: normal;
+	margin-top: -4px;
+	margin-right: 4px;
+}
+/*右侧定位导航*/
+#tool{
+	width: 50px;
+	height: 300px;
+	position: fixed;
+	top: 100px;
+	right: 40px;
+	
+}
+#tool div{
+	font-size: 14px;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#tool div a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	background-color: #fff;
+	word-break: keep-all;
+	
+	padding-top: 6px;
+	box-sizing: border-box;
+	position: relative;
+	
+}
+/*a标签下的横线*/
+#tool div a:after{  /*在a标签之后*/
+	content: "";
+	border-bottom: 1px solid #EFEFEF;
+	width: 34px;
+	position: absolute;
+	left: 8px;
+	bottom: 0;
+}
+#tool div .mt{/*两个字也能称满*/
+	line-height: 40px;
+}

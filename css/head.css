@@ -1,0 +1,183 @@
+@charset "utf-8";   /*设置编码*/
+@import url("reset.css"); /*导入其他css文件*/
+@import url("content.css");
+@import url("yhgj.css");
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');/*ie专用   format告诉浏览器是否支持,不支持不加载,*/
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),/*体积小优先使用*/
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),/*体积大*/
+      url('../font/iconfont.svg#iconfont') format('svg');/*自己画*/
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; /*webkit内核抗锯齿*/
+  -moz-osx-font-smoothing: grayscale;  /*火狐抗锯齿*/
+}
+
+#headMessage li{
+	float: left;       /*向左浮动*/
+	line-height: 35px;  /*行高*/
+	padding: 0 6px;     /*外边距上下0左右6*/
+	font-size: 0px;
+}
+#headMessage a{
+	color: #6C6C6C;
+	font-size: 12px;
+}
+#headMessage a:hover{
+	color: #f40; /*淘宝红*/
+}
+#headMessage a.login{  /*请登录为红色*/
+	color: #f22e00;
+}
+#headMessage span{    /*下三角的大小*/
+	font-size: 12px;
+}
+#headMessage span.arrow{  /*字与 下三角的距离*/
+	margin-left: 7px;
+}
+
+/*搜索*/
+#headSearch{
+	background-color: #fff;
+	padding: 24px 0px 10px 0px;
+}
+/*左浮动的logo*/
+#headSearch h1 a{
+	display: block;
+	width: 160px;
+	height: 58px;
+	background: url(../img/logo.png) center no-repeat; /* 居中不重复*/
+	background-size: 142px 58px;
+	text-indent: -9999px;
+	overflow: hidden;
+	marker-top: 8px;
+}
+/*右浮动的二维码*/
+#headSearch .code{
+	width: 72px;
+	height: 86px;
+	border: 1px solid #EEEEEE;
+	position: relative; /*相对定位，相对定位元素的定位是相对其正常位置*/
+	margin-right: 20px;
+	text-align: center;
+}
+/*二维码的样式*/
+#headSearch .code img{
+	width: 62px;
+	height: 62px;
+}
+/*关闭符号的样式*/
+#headSearch .close{
+	position:absolute;/*绝对定位，相当与非static第一个父元素进行定位*/
+	left: -16px;
+	top:-1px;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	font-size: 14px;
+	border: 1px solid #EEEEEE;
+	color: #eee;
+	cursor: pointer;/*鼠标放上去是  手的形状*/
+}
+/*搜索框最外层*/
+#headSearch .search{
+	width: 630px;
+	margin: 0 auto;
+}
+/*搜索框上面的菜单*/
+#headSearch .searchTab{
+	height: 22px;
+}
+#headSearch .searchTab li{  /*ul的样式*/
+	float: left;
+	width: 36px;
+	line-height: 22px;
+	margin-right:4px ;
+	text-align: center;  /*文字居中快捷键ta3*/
+	color: #f40;
+}
+#headSearch li.active{     /*搜索框上面的菜单 '宝贝' 选中 状态*/
+	margin-left: 20px;
+	color: #fff;
+	font-weight: bold;   /*字体加粗  fw4*/
+	border-radius: 6px 6px 0px 0px; /*左上角	 右上角		右下角 左下角*/
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+		/*渐变色					                            默认从上往下   开始的颜色  结束的颜色*/
+
+}
+#headSearch li.qq:hover{  /*'天猫,店铺'悬停的背景色*/
+	background: #ffeee5;
+}
+/*搜索框*/
+#headSearch .searchContent{
+	height: 40px;
+}
+#headSearch .searchBox{  /*定义div的形状看上去像输入框*/
+	width: 554px;
+	height: 40px;
+	box-sizing: border-box;
+	border: 2px solid #ff5000;
+	border-right: none;
+	border-radius: 20px 0px 0px 20px;
+	overflow: hidden;
+	position: relative;
+}
+
+#headSearch .searchBox input{
+	width: 490px;
+	height: 36px;        /*因为父级div高40px 减去上下border为36px*/
+	line-height: 36px;
+	outline: none;    
+	border: none;			/*输入框去掉边框*/
+	text-indent: 10px;/*输入框的文本缩进10px*/
+	z-index: 2;
+	background-color: transparent;/*背景色为透明*/
+}
+#headSearch .searchBox .placeholder{  /*放大镜和默认文本*/
+	position: absolute;
+	top: 6px;
+	left: 14px;
+}
+#headSearch .Magnifier{/*放大镜*/
+	font-size: 20px;
+	font-weight: bold;   /*加粗放大镜*/
+	color: #999999;
+}
+#headSearch .searchBox .placeholder span{  /*输入框的默认文本*/
+	color: #9c9c9c;
+	vertical-align: 4px;/*默认文本的高度*/
+}
+
+#headSearch .imgSearch{   /*照相机*/
+	font-size: 28px;
+	color: #999999;
+	position: absolute;
+	top: -2px;
+	right: 16px;
+	cursor: pointer;/*鼠标小手*/
+}
+#headSearch .searchContent button{  /*搜索按钮*/
+	width: 74px;
+	height: 40px;
+	text-align: center;/*居中*/
+	font-size: 18px;
+	line-height: 40px;
+	color: #fff;
+	border: none;
+	background-image: linear-gradient(to right,#ff9000,#ff5000);
+	border-radius:0 20px 20px 0 ;
+}
+/*热词*/
+#headSearch .houKey{
+	height: 25px;
+	line-height: 25px;
+}
+#headSearch .houKey a:hover{
+	color: #f50;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>checked伪类</title>
+		<style type="text/css">
+			.newbox{
+				width: 900px;
+				background: #EEEEEE;
+				padding: 20px;
+				padding-top: 56px;
+				border-radius:8px ;
+				margin: 50px auto;
+				position: relative;
+			}
+			.newbox span{
+				position: absolute;
+				width: 150px;
+				text-align: center;
+				height: 36px;
+				line-height: 36px;
+				border-radius: 8px 8px 0 0;
+				background: #dfdddc;
+				top: 20px;	
+			}
+			.newbox label:nth-child(1) span{
+				left: 20px;
+			}
+		    .newbox label:nth-child(2) span{
+				left: 170px;
+			}
+			.newbox label:nth-child(3) span{
+				left: 320px;
+			}
+			.newbox ul{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				background: white;
+				line-height: 26px;
+			}
+			.newbox ul li{
+				height: 26px;
+				overflow: hidden;
+			}
+			.newbox ul a{
+				color: #222222;
+				text-decoration: none;
+			}
+			.newbox ul a:hover{
+				color: orangered;
+			}
+			/*
+			 * 基础style结束
+			 */
+			.newbox ul,.newbox input{
+				display: none;
+				
+			}
+			.newbox input:checked ~ ul{
+				display: block;
+			}
+			.newbox input:checked + span {
+				background: white;
+				color: orangered;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="newbox">
+			<label>
+				<input type="radio" name="tab" id="" value="" checked/>
+				<span id="">公告</span>
+				<ul>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+				</ul>
+			</label>
+			<label>
+				<input type="radio" name="tab" id="" value="" />
+				<span id="">规则</span>
+				<ul>
+					<li><a href="#">杨烁的婚礼太甜了！可怜这个伴郎小哥哥还被家里催婚</a></li>
+					<li><a href="#">杨烁的婚礼太甜了！可怜这个伴郎小哥哥还被家里催婚</a></li>
+					<li><a href="#">杨烁的婚礼太甜了！可怜这个伴郎小哥哥还被家里催婚</a></li>
+					<li><a href="#">杨烁的婚礼太甜了！可怜这个伴郎小哥哥还被家里催婚</a></li>
+					<li><a href="#">杨烁的婚礼太甜了！可怜这个伴郎小哥哥还被家里催婚</a></li>
+					<li><a href="#">杨烁的婚礼太甜了！可怜这个伴郎小哥哥还被家里催婚</a></li>
+				</ul>
+			</label>
+			<label>
+				<input type="radio" name="tab" id="" value="" />
+				<span id="">论坛</span>
+				<ul>
+					<li><a href="#">适合二三本考生考研的5大专业！毕业就捧金饭碗</a></li>
+					<li><a href="#">适合二三本考生考研的5大专业！毕业就捧金饭碗</a></li>
+					<li><a href="#">适合二三本考生考研的5大专业！毕业就捧金饭碗</a></li>
+				</ul>
+			</label>
+			<label>
+				<input type="radio" name="tab" id="" value=""/>
+				<span id="">公告</span>
+				<ul>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+				</ul>
+			</label>
+			<label>
+				<input type="radio" name="tab" id="" value=""/>
+				<span id="">公告</span>
+				<ul>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+					<li><a href="#">哈士奇是狗界天生乐天派，就算被门夹了，也脸上笑嘻嘻……</a></li>
+				</ul>
+			</label>
+		</div>
+	</body>
+</html>

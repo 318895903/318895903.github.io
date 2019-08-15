@@ -1,0 +1,90 @@
+/*样式重置: 有些标签默认的样式 不需要所以提前设定*/
+
+/*预定义样式*/
+
+body, p, h1, h2, h3, h4 {
+	margin: 0;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img {
+	border: none;
+	vertical-align: middle;
+	/*去除底部空白*/
+}
+a {
+	text-decoration: none;
+	/*去除下划线*/
+	color: #3C3C3C;
+}
+i {
+	font-style: normal;
+	/*去除斜体*/
+}
+
+input, button {
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	outline: none;
+}
+
+body {
+	font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+	color: #3C3C3C;
+	background-color: #F4F4F4;
+}
+
+/*清除浮动*/
+.clearfix:after {	/*:after伪对象选择符,渲染这个伪对象,可添加内容*/
+	content: '';	/*添加的内容*/
+	display: block;/*将添加的内容转为块状元素*/
+	clear: both;/*添加的内容两侧不能存在浮动元素*/
+}
+
+.fl {
+	/*向左浮动*/
+	float: left;
+}
+
+.fr {
+	/*向右浮动*/
+	float: right;
+}
+
+.layer {    /*内容居中*/
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.c4 {
+	color: #f40; /*淘宝红*/
+}
+
+.c5 {
+	color: #f50;
+}
+.c6{
+	color: #8d7afb;
+}
+.c7{
+	color: #a8c001;
+}
+.mr5{
+	margin-right: 5px;
+}
+.mr7{
+	margin-right: 7px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.mr10 {
+	margin-right: 10px;
+}
+
